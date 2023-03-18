@@ -1,18 +1,19 @@
 # Turborepo starter
 
-This is an official Yarn v1 starter turborepo.
+This is a PNPM project starter turborepo.
 
 ## What's inside?
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
+This turborepo uses [pnpm](https://pnpm.io/) as a package manager. It includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- next`: a [Next.js](https://nextjs.org) app. It serves as an example frontend.
+- `server`: a sample express server, serves as an example API endpoint.
+- `ui`: a stub React component library shared by both `next-app`
+- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `jest-custom`: Ignore it for now
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
@@ -27,7 +28,9 @@ This turborepo has some additional tools already setup for you:
 
 ## Setup
 
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
+This repository is used in the `pnpm create-turbo:latest` command, and selected when choosing which package manager you wish to use with your monorepo (pnpm).
+
+Turborepo is installed globally with `pnpm install turbo --global`. See further guide on [installing Turborepo globally](https://turbo.build/repo/docs/installing).
 
 ### Build
 
@@ -35,7 +38,9 @@ To build all apps and packages, run the following command:
 
 ```
 cd my-turborepo
-yarn run build
+pnpm run build
+
+or turbo dev (turbo must be installed globally)
 ```
 
 ### Develop
@@ -44,7 +49,8 @@ To develop all apps and packages, run the following command:
 
 ```
 cd my-turborepo
-yarn run dev
+pnpm run dev
+turbo dev  (turbo must be installed globally)
 ```
 
 ### Remote Caching
@@ -55,7 +61,7 @@ By default, Turborepo will cache locally. To enable Remote Caching (Beta) you wi
 
 ```
 cd my-turborepo
-npx turbo login
+turbo login  (turbo must be installed globally)
 ```
 
 This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
@@ -63,7 +69,7 @@ This will authenticate the Turborepo CLI with your [Vercel account](https://verc
 Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
 
 ```
-npx turbo link
+turbo link
 ```
 
 ## Useful Links
