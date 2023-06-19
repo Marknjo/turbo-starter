@@ -7,22 +7,24 @@
     "start": "build/src",
     "dev": "tsnd src/index",
     "build": "tsc",
-    "test": "jest --coverage",
+    "test": "vitest -w --reporter verbose",
+    "coverage": "jest --coverage",
     "lint": "eslint src --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^5.0.2",
-    "express": "^4.18.2",
     "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*"
+    "express": "^4.18.2",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.0.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^18.15.3",
     "eslint": "^8.36.0",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "vitest": "^0.32.2"
   }
 }
