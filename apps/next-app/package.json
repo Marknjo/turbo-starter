@@ -11,22 +11,22 @@
     "lint": "eslint src --fix"
   },
   "dependencies": {
+    "@mj/server": "workspace:*",
+    "@mj/ui": "workspace:*",
     "next": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@mj/server": "workspace:*",
-    "@mj/ui": "workspace:*"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.15.3",
-    "@types/react": "^18.0.28",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.36.0",
     "@mj/eslint-config": "workspace:*",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
     "@mj/tsconfig": "workspace:*",
-    "typescript": "^5.0.2",
+    "@types/node": "^20.3.1",
+    "@types/react": "^18.2.12",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.43.0",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.1.3",
     "vitest": "^0.32.2"
   }
 }

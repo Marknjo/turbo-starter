@@ -15,15 +15,14 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/react-hooks": "^8.0.1",
-    "@testing-library/user-event": "^14.4.3",
-    "esbuild": "^0.17.12",
     "@mj/eslint-config": "workspace:*",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "esbuild": "^0.18.4",
     "husky": "^8.0.3",
     "identity-obj-proxy": "^3.0.0",
-    "lint-staged": "^13.2.0",
-    "msw": "^1.1.0",
+    "lint-staged": "^13.2.2",
+    "msw": "^1.2.2",
     "prettier": "latest",
     "turbo": "latest"
   },
