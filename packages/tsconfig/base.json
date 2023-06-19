@@ -3,6 +3,7 @@
   "display": "Default",
   "compilerOptions": {
     "allowJs": true,
+    "allowImportingTsExtensions": true,
     "composite": false,
     "declaration": true,
     "declarationMap": true,

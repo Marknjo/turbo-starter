@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    es2021: true,
   },
   extends: [
     'next',
@@ -35,9 +36,10 @@ module.exports = {
       },
     ],
 
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/require-default-props': 'off',
-    'react/react-in-jsx-scope': 'off',
     'import/prefer-default-export': 'off',
     'react/no-unescaped-entities': 'off',
     // next
