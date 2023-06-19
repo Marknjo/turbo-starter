@@ -6,20 +6,23 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
     },
+    "start": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
     "lint": {
       "outputs": []
     },
     "dev": {
       "cache": false
     },
-
+    "coverage": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"]
+    },
     "test": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "coverage/**"
-      ]
+      "dependsOn": ["^build"],
+      "outputs": []
     }
   }
 }
