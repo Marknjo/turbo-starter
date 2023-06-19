@@ -10,9 +10,9 @@ This turborepo uses [pnpm](https://pnpm.io/) as a package manager. It includes t
 
 - next`: a [Next.js](https://nextjs.org) app. It serves as an example frontend.
 - `server`: a sample express server, serves as an example API endpoint.
-- `ui`: a stub React component library shared by both `next-app`
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `@mj/ui`: a stub React component library shared by both `next-app`
+- `@mj/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@mj/tsconfig`: `@mj/tsconfig.json`s used throughout the monorepo
 - `jest-custom`: Ignore it for now
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
