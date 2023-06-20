@@ -4,7 +4,6 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["src/*"],
       "@pages/*": ["src/components/pages/*"],
       "@ui/*": ["src/components/ui/*"],
       "@layouts/*": ["src/components/layouts/*"],
