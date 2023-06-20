@@ -1,5 +1,5 @@
 {
-  "extends": "@mj/tsconfig/nextjs.json",
+  "extends": "@mj/tsconfig/react.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -15,6 +15,6 @@
       "@server/*": ["./src/server/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src/"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -14,7 +14,7 @@ module.exports = {
   ],
   plugins: ['import', '@typescript-eslint'],
   parserOptions: {
-    project: ['./@mj/tsconfig.json'],
+    project: ['./tsconfig.json'],
   },
   settings: {
     'import/parsers': {
@@ -33,18 +33,33 @@ module.exports = {
   },
   overrides: [
     {
-      env: {
-        jest: true,
-      },
-      files: ['**/__tests__/**/*.[jt]s', '**/?(*.)+(spec|test).[jt]s'],
-      extends: ['plugin:jest/recommended'],
+      files: [
+        '**/__tests__/**/*.[jt]s',
+        '**/__mocks__/**/*.[jt]s',
+        '**/?(*.)+(spec|test).[jt]s',
+      ],
+      extends: ['plugin:vitest/recommended'],
       rules: {
         'import/no-extraneous-dependencies': [
           'off',
           { devDependencies: ['**/?(*.)+(spec|test).[jt]s'] },
         ],
+        'vitest/max-nested-describe': [
+          'error',
+          {
+            max: 3,
+          },
+        ],
       },
     },
   ],
-  ignorePatterns: ['**/*.js', 'node_modules', '.turbo', 'dist', 'coverage'],
+  ignorePatterns: [
+    '**/*.js',
+    '**/*.cjs',
+    'node_modules',
+    '.turbo',
+    'dist',
+    'coverage',
+    'tests-setup',
+  ],
 }

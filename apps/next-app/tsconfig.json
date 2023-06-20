@@ -1,32 +1,18 @@
 {
   "extends": "@mj/tsconfig/nextjs.json",
   "compilerOptions": {
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@pages/*": [
-        "src/components/pages/*"
-      ],
-      "@ui/*": [
-        "src/components/ui/*"
-      ],
-      "@layouts/*": [
-        "src/components/layouts/*"
-      ],
-      "@utils/*": [
-        "src/components/utils/*"
-      ],
-      "@data/*": [
-        "src/data/*"
-      ],
-      "@lib/*": [
-        "src/lib/*"
-      ],
-      "@store/*": [
-        "src/store/*"
-      ],
-      "@server/*": [
-        "src/server/*"
-      ]
+      "@src/*": ["src/*"],
+      "@pages/*": ["src/components/pages/*"],
+      "@ui/*": ["src/components/ui/*"],
+      "@layouts/*": ["src/components/layouts/*"],
+      "@utils/*": ["src/components/utils/*"],
+      "@data/*": ["src/data/*"],
+      "@lib/*": ["src/lib/*"],
+      "@store/*": ["src/store/*"],
+      "@server/*": ["src/server/*"]
     },
     "plugins": [
       {
@@ -38,9 +24,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "test-setup.js"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

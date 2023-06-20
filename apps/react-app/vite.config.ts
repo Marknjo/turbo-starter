@@ -1,6 +1,10 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+
 const root = resolve(__dirname, 'src')
 
 // https://vitejs.dev/config/
@@ -20,4 +24,12 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  test: {
+    environment: 'jsdom',
+    setupFiles: './tests-setup.js',
+    reporters: 'verbose',
+    coverage: {
+      provider: 'istanbul', // or 'v8'
+    },
+  },
 })

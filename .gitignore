@@ -5,16 +5,14 @@ node_modules
 .pnp
 .pnp.js
 
-# build
-dist
-
 # testing
 coverage
 
-# next.js
+# next.js/build
 .next/
 out/
 build
+dist
 
 # misc
 .DS_Store

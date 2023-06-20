@@ -8,7 +8,7 @@
     "dev": "tsnd src/index",
     "build": "tsc",
     "test": "vitest -w --reporter verbose",
-    "coverage": "jest --coverage",
+    "coverage": "vitest --coverage",
     "lint": "eslint src --fix"
   },
   "keywords": [],

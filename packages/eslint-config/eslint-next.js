@@ -23,7 +23,7 @@ module.exports = {
     'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
-        project: ['apps/*/@mj/tsconfig.json'],
+        project: ['apps/*/tsconfig.json'],
       },
     },
   },
@@ -32,7 +32,7 @@ module.exports = {
     'react/function-component-definition': [
       2,
       {
-        namedComponents: 'function-declaration | arrow-function',
+        namedComponents: 'function-declaration',
       },
     ],
 
@@ -47,8 +47,31 @@ module.exports = {
 
     '@typescript-eslint/no-use-before-define': 'off',
   },
+  overrides: [
+    {
+      files: [
+        '**/__tests__/**/*.[jt]s',
+        '**/__mocks__/**/*.[jt]s',
+        '**/?(*.)+(spec|test).[jt]s',
+      ],
+      extends: ['plugin:vitest/recommended'],
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'off',
+          { devDependencies: ['**/?(*.)+(spec|test).[jt]s'] },
+        ],
+        'vitest/max-nested-describe': [
+          'error',
+          {
+            max: 3,
+          },
+        ],
+      },
+    },
+  ],
   ignorePatterns: [
     '**/*.js',
+    '**/*.cjs',
     '**/*.json',
     'node_modules',
     'public',
