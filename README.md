@@ -1,6 +1,14 @@
-# Turborepo starter
+# Turborepo (NestJS + NextJS + React + Tailwind + Typescript + Vitest + Husk + Github CI/CD Pipeline) Starter
 
-This is a PNPM project starter turborepo.
+This is fullstack Turborepo starter. It comes with the following features.
+
+✅ Turborepo
+✅ Nestjs or Express Api Server
+✅ NextJS Web app or Vanilla React Web App
+✅ Tailwindcss
+✅ Testing using Jest for NestJs API and Vitest for All other apps
+✅ Github Actions
+✅ Package scripts using NPS
 
 ## What's inside?
 
@@ -9,11 +17,11 @@ This turborepo uses [pnpm](https://pnpm.io/) as a package manager. It includes t
 ### Apps and Packages
 
 - next`: a [Next.js](https://nextjs.org) app. It serves as an example frontend.
-- `server`: a sample express server, serves as an example API endpoint.
+- `@mj/api-nest | @mj/api-exp`: a sample NestJS & ExpressJS server.
+- `@mj/next-web | @mj/react-web`: nextjs/react setup with tailwindcss.
 - `@mj/ui`: a stub React component library shared by both `next-app`
 - `@mj/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@mj/tsconfig`: `@mj/tsconfig.json`s used throughout the monorepo
-- `jest-custom`: Ignore it for now
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
@@ -30,7 +38,7 @@ This turborepo has some additional tools already setup for you:
 
 This repository is used in the `pnpm create-turbo:latest` command, and selected when choosing which package manager you wish to use with your monorepo (pnpm).
 
-Turborepo is installed globally with `pnpm install turbo --global`. See further guide on [installing Turborepo globally](https://turbo.build/repo/docs/installing).
+Turborepo is also installed globally with `pnpm install turbo --global`. See further guide on [installing Turborepo globally](https://turbo.build/repo/docs/installing).
 
 ### Build
 
@@ -38,7 +46,9 @@ To build all apps and packages, run the following command:
 
 ```
 cd my-turborepo
-pnpm run build
+pnpm build
+
+or pnpm build -F @mj/<app-name> i.e. @mj/next-web
 
 or turbo dev (turbo must be installed globally)
 ```
@@ -71,6 +81,14 @@ Next, you can link your Turborepo to your Remote Cache by running the following 
 ```
 turbo link
 ```
+
+## Important Info
+
+You don't have to use all 4 apps. Mostly you will need either a @mj/react-web with either @mj/exp-api or @mj/nest-api. Feel free to delete or rename the apps name to match your needs. Also delete the apps you won't be needing in your workflow.
+
+In case need @mj/nest-web as standalone app. You don't need a monorepo. It might be overkill.
+
+That's all happy coding.
 
 ## Useful Links
 
