@@ -25,7 +25,7 @@
     "identity-obj-proxy": "^3.0.0",
     "lint-staged": "^13.2.3",
     "msw": "^1.2.2",
-    "prettier": "latest",
+    "prettier": "^3.0.0",
     "turbo": "^1.10.7"
   },
   "engines": {
