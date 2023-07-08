@@ -1,5 +1,5 @@
 {
-  "name": "@mj/next-app",
+  "name": "@mj/next-web",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "lint": "eslint src --fix"
   },
   "dependencies": {
-    "@mj/server": "workspace:*",
+    "@mj/exp-api": "workspace:*",
     "@mj/ui": "workspace:*",
     "next": "^13.4.9",
     "react": "^18.2.0",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@mj/eslint-config": "workspace:*",
+    "@mj/nest-api": "workspace:^",
     "@mj/tsconfig": "workspace:*",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
