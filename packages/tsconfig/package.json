@@ -7,6 +7,7 @@
     "base.json",
     "nextjs.json",
     "server.json",
-    "react.json"
+    "react.json",
+    "react-native-library.json"
   ]
 }
