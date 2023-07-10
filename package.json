@@ -12,7 +12,8 @@
     "dev": "turbo run dev --parallel",
     "preview": "turbo run start",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
     "test": "turbo run test",
     "coverage": "vitest --coverage",
     "prepare": "husky install"
@@ -44,7 +45,5 @@
       "prettier --write"
     ]
   },
-  "dependencies": {
-    "react:latest": "link:@testing-library/react:latest"
-  }
+  "dependencies": {}
 }

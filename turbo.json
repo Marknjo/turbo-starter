@@ -4,7 +4,13 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": [
+        "dist/**",
+        "build/**",
+        ".next/**",
+        "node_modules/.cache/metro/**",
+        "!.next/cache/**"
+      ]
     },
     "start": {
       "dependsOn": ["^build"],
@@ -14,7 +20,8 @@
       "outputs": []
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     },
     "coverage": {
       "dependsOn": ["^build"],
@@ -23,6 +30,9 @@
     "test": {
       "dependsOn": ["^build"],
       "outputs": []
+    },
+    "clean": {
+      "cache": false
     }
   }
 }
